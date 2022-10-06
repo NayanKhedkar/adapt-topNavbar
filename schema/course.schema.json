@@ -1,0 +1,96 @@
+{
+  "$anchor": "resources-course",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "$patch": {
+    "source": {
+      "$ref": "course"
+    },
+    "with": {
+      "properties": {
+        "_globals": {
+          "type": "object",
+          "default": {},
+          "properties": {
+            "_topNavbar": {
+              "type": "array",
+              "default": [],
+              "properties": {
+                "topnavbar": {
+                  "type": "string",
+                  "title": "topnavbar",
+                  "default": "Add extension to drawer/navigation.",
+                  "_adapt": {
+                    "translatable": true
+                  }
+                }
+              }
+            }
+          }
+        },
+        "_topNavbar": {
+          "type": "array",
+          "default": [],
+          "required": [],
+          "title": "Items",
+          "items": {
+            "type": "object",
+            "properties": {
+              "extension": {
+                "type": "string",
+                "title": "Add extension added in course.json file",
+                "description": "Its will only added the extension to drawer/navigation which configure in course",
+                "default": ""
+              },
+              "addTo": {
+                "type": "string",
+                "title": "I the drawer",
+                "description": "The order in which this extension should appear as a drawer item",
+                "default": ""
+              },
+              "iconClass": {
+                "type": "string",
+                "title": "Icon css class",
+                "default": "icon-list"
+              },
+              "title": {
+                "type": "string",
+                "title": "Title",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                }
+              },
+              "description": {
+                "type": "string",
+                "title": "Description",
+                "default": "Select here to view extension in drawer item",
+                "_adapt": {
+                  "translatable": true
+                }
+              },
+              "_trigger": {
+                "type": "string",
+                "title": "Add Trigger",
+                "default": ""
+              },
+              "ariaLabel": {
+                "type": "string",
+                "title": "ARIA labels"
+              },
+              "_drawerOrder": {
+                "type": "number",
+                "title": "Drawer order",
+                "default":0
+              },
+              "className": {
+                "type": "string",
+                "title": "Items"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

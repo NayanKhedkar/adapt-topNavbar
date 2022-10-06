@@ -1,0 +1,112 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "required": false,
+  "globals": {
+    "topNavbar": {
+      "type": "string",
+      "required": true,
+      "default": "Top Navbar.",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "pluginLocations": {
+      "type": "object",
+      "required": true,
+      "properties": {
+        "config": {
+          "type": "object"
+        },
+        "course": {
+          "type": "object",
+          "properties": {
+            "_topNavbar": {
+              "type": "array",
+              "default": [],
+              "required": true,
+              "title": "Items",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "extension": {
+                    "type": "string",
+                    "title": "Add extension added in course.json file",
+                    "description": "Its will only added the extension to drawer/navigation which configure in course",
+                    "default": "",
+                    "inputType": "Text",
+                    "help": "Its will only added the extension to drawer/navigation which configure in course"
+                  },
+                  "addTo": {
+                    "type": "string",
+                    "title": "Add to the drawer/navigation",
+                    "description": "The order in which this extension should appear as a drawer item",
+                    "default": "",
+                    "inputType": "Text"
+                  },
+                  "iconClass": {
+                    "type": "string",
+                    "title": "Icon css class",
+                    "default": "icon-list",
+                    "inputType": "Text"
+                  },
+                  "title": {
+                    "type": "string",
+                    "title": "Title",
+                    "default": "",
+                    "translatable": true,
+                    "inputType": "Text"
+                  },
+                  "description": {
+                    "type": "string",
+                    "title": "Description",
+                    "default": "Select here to view extension in drawer item",
+                   "translatable": true,
+                    "inputType": "Text"
+                  },
+                  "_trigger": {
+                    "type": "string",
+                    "title": "Add Trigger",
+                    "default": "",
+                    "inputType": "Text"
+                  },
+                  "ariaLabel": {
+                    "type": "string",
+                    "title": "ARIA labels",
+                    "inputType": "Text"
+                  },
+                  "_drawerOrder": {
+                    "type": "number",
+                    "title": "Drawer order",
+                    "default":0,
+                    "inputType": "Number"
+                  },
+                  "className": {
+                    "type": "string",
+                    "title": "Items",
+                    "inputType": "Text"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "contentobject": {
+          "type": "object"
+        },
+        "article": {
+          "type": "object"
+        },
+        "block": {
+          "type": "object"
+        },
+        "component": {
+          "type": "object"
+        }
+      }
+    }
+  }
+}

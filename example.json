@@ -1,0 +1,40 @@
+    // To go in the course.json file
+    
+    "_topNavbar": [
+    {
+      "extension": "_glossary",
+      "addTo": "navbar",
+      "iconClass": "icon-book",
+      "_trigger": "glossary:showGlossary",
+      "ariaLabel": "Glossary"
+    },
+    {
+      "extension": "_resources",
+      "addTo": "navbar",
+      "iconClass": "icon-list",
+      "_trigger": "resources:showResources",
+      "ariaLabel": "Resources"
+    },
+    {
+      "extension": "_languagePicker",
+      "addTo": "drawer",
+      "iconClass": "",
+      "_trigger": "languagePicker:showLanguagePicker",
+      "title": "Language selection",
+      "description": "Please select the language",
+      "_drawerOrder": 0,
+      "className": "is-language-picker",
+      "ariaLabel": "LanguagePicker"
+    },
+    {
+      "extension": "_pageLevelProgress",
+      "title": "page Level Progress",
+      "description": "Show Page level progress",
+      "addTo": "drawer",
+      "iconClass": "",
+      "_trigger": "pageLevelProgress:showPageLevelProgress",
+      "_drawerOrder": 0,
+      "className": "is-page-level-progress",
+      "ariaLabel": "Page Level Progress"
+    }
+  ]
